@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ellen Mae Borja — Portfolio</title>
+  <meta name="description" content="Ellen Mae Borja — 4th-year BS Information Technology student at NEMSU, looking for an IT internship. Projects, certificates and resume." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try {
+      const t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Home">
+        <span class="brand-mark">EB</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#home" class="nav-link" data-view="home">Home</a>
+        <a href="#projects" class="nav-link" data-view="projects">Projects</a>
+        <a href="#certificates" class="nav-link" data-view="certificates">Certificates</a>
+        <a href="#about" class="nav-link" data-view="about">About</a>
+        <a href="#resume" class="nav-link" data-view="resume">Resume</a>
+        <a href="#contact" class="nav-link" data-view="contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- =====================================================
+         HOME — summary of everything
+         ===================================================== -->
+    <div class="view" id="view-home" data-title="Ellen Mae Borja — Portfolio">
+      <section class="hero reveal">
+        <div class="avatar-wrap">
+          <div class="avatar">
+            <img src="images/profile.jpg" alt="Ellen Mae Borja" />
+          </div>
+          <span class="status-dot" title="Available for opportunities"></span>
+        </div>
+        <div class="hero-text">
+          <p class="eyebrow">BS Information Technology Student · Open to Internships</p>
+          <h1 class="hero-name">Ellen Mae Borja</h1>
+          <p class="hero-role">
+            Hi! I'm a fourth-year IT student at North Eastern Mindanao State University who enjoys
+            learning by building. For my capstone I made <a href="#kitawork">KitaWork</a>, a job platform
+            for our local community, and I'm now looking for an internship where I can learn from
+            experienced people and keep growing.
+          </p>
+          <div class="hero-buttons">
+            <a href="#kitawork" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              See KitaWork
+            </a>
+            <a href="#resume" class="btn btn-ghost">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+              My Resume
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="bento">
+        <article class="card about reveal">
+          <h2 class="card-title"><span class="title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span> About Me</h2>
+          <p>
+            I'm a BS Information Technology student at NEMSU Cantilan, graduating in 2027.
+            I'm curious about many sides of IT, from technical support and networking to
+            software, and I like turning what I learn in class into things people can actually use.
+          </p>
+          <dl class="facts" data-facts></dl>
+          <a href="#about" class="view-all more-link">More about me <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card achievements reveal">
+          <div class="card-head">
+            <h2 class="card-title"><span class="title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg></span> Certificates</h2>
+            <a href="#certificates" class="view-all">View all <span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="cert-list" id="featuredCerts"></ul>
+        </article>
+
+        <article class="card tech reveal">
+          <h2 class="card-title"><span class="title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg></span> Tech Stack</h2>
+          <div data-tech></div>
+        </article>
+      </section>
+
+      <section class="projects">
+        <div class="section-head reveal">
+          <h2 class="section-title">Featured Project</h2>
+          <a href="#projects" class="view-all">View all projects <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="project-grid featured" id="featuredProjects"></div>
+      </section>
+
+      <section class="home-cta reveal">
+        <h2>Looking for an IT intern?</h2>
+        <p>I'd be glad to hear from you. I learn quickly and I'm happy to help wherever I'm needed.</p>
+        <a href="#contact" class="btn btn-primary">Get in touch</a>
+      </section>
+    </div>
+
+    <!-- =====================================================
+         PROJECTS — everything
+         ===================================================== -->
+    <div class="view" id="view-projects" data-title="Projects — Ellen Mae Borja">
+      <header class="page-head reveal">
+        <a href="#home" class="back-link"><span aria-hidden="true">←</span> Home</a>
+        <h1 class="page-title">Projects</h1>
+        <p class="page-sub">Things I've designed and built. <span class="count" id="projectCount"></span></p>
+      </header>
+      <div class="project-grid featured" id="allProjects"></div>
+    </div>
+
+    <!-- =====================================================
+         KITAWORK — case study
+         ===================================================== -->
+    <div class="view" id="view-kitawork" data-nav="projects" data-title="KitaWork Case Study — Ellen Mae Borja">
+      <header class="page-head reveal">
+        <a href="#projects" class="back-link"><span aria-hidden="true">←</span> Projects</a>
+        <p class="eyebrow">Capstone Project · NEMSU · 2026</p>
+        <h1 class="page-title">KitaWork</h1>
+        <p class="page-sub cs-lead">
+          A smart community employment system that connects job seekers with verified local
+          employers in the CarCanMadCarLan area, so people can find work that fits their schedule.
+        </p>
+        <div class="hero-buttons">
+          <a href="https://www.smartkitawork.com/login" class="btn btn-primary" target="_blank" rel="noopener">Visit the live site ↗</a>
+        </div>
+      </header>
+
+      <a class="cs-shot reveal" href="images/kitawork-login.png" data-lightbox data-caption="KitaWork login page">
+        <img src="images/kitawork-login.png" alt="KitaWork login page with the tagline Find work that fits your schedule" />
+      </a>
+
+      <!-- Numbers copied from the live login page (Oct 2026); update them when they grow -->
+      <section class="cs-stats reveal" aria-label="KitaWork usage">
+        <div><strong>23</strong><span>Job seekers</span></div>
+        <div><strong>11</strong><span>Employers</span></div>
+        <div><strong>10</strong><span>Active jobs</span></div>
+        <p class="cs-note">Registered on the live site, October 2026</p>
+      </section>
+
+      <section class="cs-section reveal">
+        <h2>The problem</h2>
+        <p>
+          In small towns, finding work often depends on word of mouth, and it's hard for job seekers
+          to know which employers are real. Employers, from businesses to households needing help,
+          have no simple local place to find people. KitaWork brings both sides together in one place
+          and checks everyone before they can take part.
+        </p>
+      </section>
+
+      <section class="cs-section reveal">
+        <h2>Who it's for</h2>
+        <div class="cs-roles">
+          <div class="cs-role">
+            <span class="title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>
+            <h3>Job Seekers</h3>
+            <p>Looking for part-time or full-time work nearby.</p>
+          </div>
+          <div class="cs-role">
+            <span class="title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/></svg></span>
+            <h3>Individual Hirers</h3>
+            <p>Households that need help with tasks around the home.</p>
+          </div>
+          <div class="cs-role">
+            <span class="title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1"/></svg></span>
+            <h3>Business Employers</h3>
+            <p>Registered companies hiring for part-time or full-time roles.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section reveal">
+        <h2>How it works</h2>
+        <div class="cs-split">
+          <ol class="cs-steps">
+            <li><strong>Pick a role.</strong> Job seeker, individual hirer or business employer.</li>
+            <li><strong>Add personal info, skills and schedule,</strong> so matches fit the hours people can actually work.</li>
+            <li><strong>Verify email and upload an ID.</strong> Businesses submit a business permit or DTI certificate.</li>
+            <li><strong>PESO reviews and approves the account.</strong> The local Public Employment Service Office checks every document.</li>
+            <li><strong>Job posts are reviewed too</strong> before they go public, keeping out fake or unsafe listings.</li>
+          </ol>
+          <a class="cs-shot" href="images/kitawork-register.png" data-lightbox data-caption="KitaWork sign-up: choose a role, then six steps">
+            <img src="images/kitawork-register.png" alt="KitaWork sign-up page showing the three roles and six steps" loading="lazy" />
+          </a>
+        </div>
+      </section>
+
+      <section class="cs-section reveal">
+        <h2>What makes it different</h2>
+        <ul class="cs-points">
+          <li><strong>Verified, not anonymous.</strong> Every user and job post is checked by PESO, so people can trust who they're dealing with.</li>
+          <li><strong>Built around schedules.</strong> Skills and availability are part of sign-up, so people with limited hours can still find work.</li>
+          <li><strong>Made for one community.</strong> Focused on the CarCanMadCarLan towns instead of being a generic job board.</li>
+          <li><strong>Installable.</strong> It can be installed like an app straight from the browser.</li>
+        </ul>
+      </section>
+
+      <section class="cs-section reveal">
+        <h2>My role</h2>
+        <ul class="cs-points">
+          <li><strong>Built it on my own.</strong> I designed and developed the whole system for my capstone, using AI coding tools to help me work faster.</li>
+          <li><strong>Four kinds of users.</strong> Job seekers, hirers, employers and PESO staff each have their own dashboard, along with job matching, messaging and ID verification.</li>
+          <li><strong>Presented and defended</strong> the system in front of a panel at NEMSU.</li>
+          <li><strong>Built with</strong> Next.js, React, TypeScript, Tailwind CSS and Supabase.</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- =====================================================
+         CERTIFICATES — everything
+         ===================================================== -->
+    <div class="view" id="view-certificates" data-title="Certificates — Ellen Mae Borja">
+      <header class="page-head reveal">
+        <a href="#home" class="back-link"><span aria-hidden="true">←</span> Home</a>
+        <h1 class="page-title">Certificates</h1>
+        <p class="page-sub">Courses and programs I've completed. <span class="count" id="certCount"></span></p>
+      </header>
+      <ul class="cert-list cert-grid" id="allCerts"></ul>
+    </div>
+
+    <!-- =====================================================
+         ABOUT
+         ===================================================== -->
+    <div class="view" id="view-about" data-title="About — Ellen Mae Borja">
+      <header class="page-head reveal">
+        <a href="#home" class="back-link"><span aria-hidden="true">←</span> Home</a>
+        <h1 class="page-title">About Me</h1>
+        <p class="page-sub">A little more about who I am, where I study and what I've learned so far.</p>
+      </header>
+
+      <div class="about-page">
+        <article class="card reveal">
+          <h2 class="card-title"><span class="title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span> Hi, I'm Ellen</h2>
+          <div class="about-text">
+            <p>
+              I'm a fourth-year BS Information Technology student at North Eastern Mindanao State
+              University in Cantilan, from Surigao del Sur. I'm looking for an
+              internship where I can get hands-on experience in different areas of IT, from technical
+              support and networking to systems administration and software development.
+            </p>
+            <p>
+              For my capstone I built <a href="#kitawork">KitaWork</a>, a job platform for the
+              CarCanMadCarLan area that connects job seekers with employers verified by the local
+              PESO office. It taught me a lot, and there's still so much more I want to learn.
+            </p>
+            <p>
+              Outside of class I keep studying on my own. I've finished Cisco's Python Essentials 1 and
+              Anthropic's Claude 101 and Claude Code in Action courses. I pick up new tools quickly,
+              and I try to be organized and dependable in whatever I'm given.
+            </p>
+          </div>
+          <dl class="facts" data-facts></dl>
+        </article>
+
+        <article class="card reveal">
+          <h2 class="card-title"><span class="title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg></span> Skills</h2>
+          <div data-tech></div>
+        </article>
+      </div>
+
+      <div class="about-page about-more">
+        <article class="card reveal">
+          <h2 class="card-title"><span class="title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9 12 4l10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span> Education</h2>
+          <ol class="timeline" data-education></ol>
+        </article>
+
+        <article class="card reveal">
+          <h2 class="card-title"><span class="title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2zM8 7h6"/></svg></span> More about me</h2>
+          <div data-extras></div>
+        </article>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         RESUME
+         ===================================================== -->
+    <div class="view" id="view-resume" data-title="Resume — Ellen Mae Borja">
+      <header class="page-head reveal">
+        <a href="#home" class="back-link"><span aria-hidden="true">←</span> Home</a>
+        <h1 class="page-title">Resume</h1>
+        <p class="page-sub">A one-page summary of my education, skills and capstone project. Download the PDF below.</p>
+        <div class="hero-buttons">
+          <a href="resume.pdf" class="btn btn-primary" download="Ellen-Mae-Borja-Resume.pdf"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg> Download PDF</a>
+        </div>
+      </header>
+    </div>
+
+    <!-- =====================================================
+         CONTACT
+         ===================================================== -->
+    <div class="view" id="view-contact" data-title="Contact — Ellen Mae Borja">
+      <header class="page-head reveal">
+        <a href="#home" class="back-link"><span aria-hidden="true">←</span> Home</a>
+        <h1 class="page-title">Get in touch</h1>
+        <p class="page-sub">Have an internship opening, a question, or just want to say hi? Email is the quickest way to reach me.</p>
+      </header>
+
+      <div class="contact-grid">
+        <a class="contact-card reveal" href="mailto:ellenmaeborja2@gmail.com">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <span class="contact-text"><strong>Email</strong><span>ellenmaeborja2@gmail.com</span></span>
+        </a>
+        <a class="contact-card reveal" href="https://www.linkedin.com/in/ellen-mae-borja-5a804a39a" target="_blank" rel="noopener">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></span>
+          <span class="contact-text"><strong>LinkedIn</strong><span>Ellen Mae Borja</span></span>
+        </a>
+        <a class="contact-card reveal" href="https://github.com/Ellenmae269" target="_blank" rel="noopener">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></span>
+          <span class="contact-text"><strong>GitHub</strong><span>@Ellenmae269</span></span>
+        </a>
+        <a class="contact-card reveal" href="https://www.facebook.com/ellenmae.borja" target="_blank" rel="noopener">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg></span>
+          <span class="contact-text"><strong>Facebook</strong><span>ellenmae.borja</span></span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Ellen Mae Borja. All rights reserved.</p>
+        <div class="socials">
+          <a href="https://github.com/Ellenmae269" aria-label="GitHub" class="social" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/ellen-mae-borja-5a804a39a" aria-label="LinkedIn" class="social" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/ellenmae.borja" aria-label="Facebook" class="social" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg>
+          </a>
+          <a href="mailto:ellenmaeborja2@gmail.com" aria-label="Email" class="social">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ CERTIFICATE VIEWER ============ -->
+  <dialog class="lightbox" id="lightbox" aria-label="Certificate">
+    <button class="icon-btn lightbox-close" id="lightboxClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <img id="lightboxImg" alt="" />
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
